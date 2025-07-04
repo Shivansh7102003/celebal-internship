@@ -5,7 +5,7 @@ import numpy as np
 # Set page layout
 st.set_page_config(page_title="Introvert Personality Predictor", layout="centered")
 
-# --- Sidebar: Model Selection ---
+# Sidebar: Model Selection
 st.sidebar.title("🔍 Choose Model")
 model_choice = st.sidebar.radio("Select the model you want to use:", [
     "Logistic Regression", "Random Forest", "SVC", "KNN", "Decision Tree"
@@ -25,8 +25,7 @@ model = joblib.load(model_files[model_choice])
 
 st.title("🧠 Predict if Someone is an Introvert")
 
-# --- Input Feature Interface ---
-# Define your actual 7 features
+# Input Feature Interface
 feature_config = {
     "Time_spent_Alone": {"min": 0, "max": 24, "step": 1, "help": "Hours spent alone daily"},
     "Social_event_attendance": {"min": 0, "max": 10, "step": 1, "help": "Events attended weekly"},
